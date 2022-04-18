@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <dimen name="text_1" tools:override="true">30dp</dimen>
+    <dimen name="text_2" tools:override="true">26dp</dimen>
+    <dimen name="text_3" tools:override="true">22dp</dimen>
+    <dimen name="text_4" tools:override="true">18dp</dimen>
+    <dimen name="text_5" tools:override="true">15dp</dimen>
+    <dimen name="text_5d" tools:override="true">15sp</dimen>
+    <dimen name="text_6" tools:override="true">13dp</dimen>
+    <dimen name="text_7" tools:override="true">12dp</dimen>
+
+</resources>
