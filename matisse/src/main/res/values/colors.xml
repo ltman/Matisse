@@ -19,4 +19,11 @@
     <color name="preview_bottom_toolbar_bg">#CC000000</color>
     <color name="preview_bottom_size">#61FFFFFF</color>
 
+    <color name="colorTransparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="colorCloseBtn">#D9D9D9</color>
+    <color name="colorText">#D9D9D9</color>
+
 </resources>
