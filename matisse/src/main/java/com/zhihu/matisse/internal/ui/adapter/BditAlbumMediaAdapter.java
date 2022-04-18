@@ -231,7 +231,7 @@ public class BditAlbumMediaAdapter extends
             int spanCount = ((GridLayoutManager) lm).getSpanCount();
             int screenWidth = context.getResources().getDisplayMetrics().widthPixels;
             int availableWidth = screenWidth - context.getResources().getDimensionPixelSize(
-                    R.dimen.media_grid_spacing) * (spanCount - 1);
+                    R.dimen.bdit_media_grid_spacing) * (spanCount - 1);
             mImageResize = availableWidth / spanCount;
             mImageResize = (int) (mImageResize * mSelectionSpec.thumbnailScale);
         }

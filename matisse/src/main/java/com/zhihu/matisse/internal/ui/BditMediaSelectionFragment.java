@@ -109,7 +109,7 @@ public class BditMediaSelectionFragment extends Fragment implements
         }
         mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), spanCount));
 
-        int spacing = getResources().getDimensionPixelSize(R.dimen.media_grid_spacing);
+        int spacing = getResources().getDimensionPixelSize(R.dimen.bdit_media_grid_spacing);
         mRecyclerView.addItemDecoration(new MediaGridInset(spanCount, spacing, false));
         mRecyclerView.setAdapter(mAdapter);
         mAlbumMediaCollection.onCreate(getActivity(), this);

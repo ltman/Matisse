@@ -16,7 +16,8 @@
   -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <dimen name="media_grid_size">48dp</dimen>
-    <dimen name="media_grid_spacing">0dp</dimen>
+    <dimen name="media_grid_spacing">4dp</dimen>
+    <dimen name="bdit_media_grid_spacing">0dp</dimen>
     <dimen name="album_item_height">72dp</dimen>
 
     <dimen name="text_1" tools:override="true">30dp</dimen>
