@@ -36,6 +36,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -56,6 +57,7 @@ import com.zhihu.matisse.internal.ui.BasePreviewActivity;
 import com.zhihu.matisse.internal.ui.BditMediaSelectionFragment;
 import com.zhihu.matisse.internal.ui.adapter.AlbumsAdapter;
 import com.zhihu.matisse.internal.ui.adapter.BditAlbumMediaAdapter;
+import com.zhihu.matisse.internal.ui.widget.AlbumsSpinner;
 import com.zhihu.matisse.internal.utils.MediaStoreCompat;
 import com.zhihu.matisse.internal.utils.PathUtils;
 import com.zhihu.matisse.internal.utils.SingleMediaScanner;
@@ -82,6 +84,7 @@ public class BditMatisseActivity extends AppCompatActivity
     private SelectedItemCollection mSelectedCollection = new SelectedItemCollection(this);
     private SelectionSpec mSpec;
 
+    private AlbumsSpinner mAlbumsSpinner;
     private AlbumsAdapter mAlbumsAdapter;
     private View mContainer;
     private View mEmptyView;
@@ -117,7 +120,7 @@ public class BditMatisseActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(ContextCompat.getDrawable(this, R.drawable.ic_cancel_nav));
         Drawable navigationIcon = toolbar.getNavigationIcon();
@@ -135,6 +138,11 @@ public class BditMatisseActivity extends AppCompatActivity
         }
 
         mAlbumsAdapter = new AlbumsAdapter(this, null, false);
+        mAlbumsSpinner = new AlbumsSpinner(this);
+        mAlbumsSpinner.setOnItemSelectedListener(this);
+        mAlbumsSpinner.setSelectedTextView((TextView) findViewById(R.id.selected_album));
+        mAlbumsSpinner.setPopupAnchorView(findViewById(R.id.toolbar));
+        mAlbumsSpinner.setAdapter(mAlbumsAdapter);
         mAlbumCollection.onCreate(this, this);
         mAlbumCollection.onRestoreInstanceState(savedInstanceState);
         mAlbumCollection.loadAlbums();
@@ -263,6 +271,8 @@ public class BditMatisseActivity extends AppCompatActivity
         Handler handler = new Handler(Looper.getMainLooper());
         handler.post(() -> {
             cursor.moveToPosition(mAlbumCollection.getCurrentSelection());
+            mAlbumsSpinner.setSelection(BditMatisseActivity.this,
+                    mAlbumCollection.getCurrentSelection());
             Album album = Album.valueOf(cursor);
             if (album.isAll() && SelectionSpec.getInstance().capture) {
                 album.addCaptureCount();
