@@ -16,7 +16,7 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <com.zhihu.matisse.internal.ui.widget.BditRoundedCornerView
+    <com.zhihu.matisseBlockdit.internal.ui.widget.BditRoundedCornerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="6dp">
@@ -31,7 +31,7 @@
                 android:layout_height="match_parent"
                 tools:ignore="ContentDescription" />
 
-            <com.zhihu.matisse.internal.ui.widget.BditCheckView
+            <com.zhihu.matisseBlockdit.internal.ui.widget.BditCheckView
                 android:id="@+id/check_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,6 +69,6 @@
 
         </RelativeLayout>
 
-    </com.zhihu.matisse.internal.ui.widget.BditRoundedCornerView>
+    </com.zhihu.matisseBlockdit.internal.ui.widget.BditRoundedCornerView>
 
 </merge>

@@ -50,7 +50,7 @@ import com.zhihu.matisse.internal.entity.CaptureStrategy;
 import com.zhihu.matisse.internal.entity.SelectionSpec;
 import com.zhihu.matisse.listener.OnCheckedListener;
 import com.zhihu.matisse.listener.OnSelectedListener;
-import com.zhihu.matisse.ui.BditMatisseActivity;
+import com.zhihu.matisseBlockdit.ui.BditMatisseActivity;
 import com.zhihu.matisse.ui.MatisseActivity;
 
 import java.lang.annotation.Retention;
@@ -357,7 +357,7 @@ public final class SelectionCreator {
         }
 
         Intent intent;
-        if (mSelectionSpec.themeId == R.style.Matisse_Ltman)
+        if (mSelectionSpec.themeId == R.style.Matisse_Blockdit)
             intent = new Intent(activity, BditMatisseActivity.class);
         else
             intent = new Intent(activity, MatisseActivity.class);
@@ -376,7 +376,7 @@ public final class SelectionCreator {
             return null;
         }
         Intent intent;
-        if (mSelectionSpec.themeId == R.style.Matisse_Ltman)
+        if (mSelectionSpec.themeId == R.style.Matisse_Blockdit)
             intent = new Intent(activity, BditMatisseActivity.class);
         else
             intent = new Intent(activity, MatisseActivity.class);

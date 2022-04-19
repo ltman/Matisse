@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.zhihu.matisse.internal.ui.widget;
+package com.zhihu.matisseBlockdit.internal.ui.widget;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -29,6 +29,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.zhihu.matisse.R;
 import com.zhihu.matisse.internal.entity.Item;
 import com.zhihu.matisse.internal.entity.SelectionSpec;
+import com.zhihu.matisse.internal.ui.widget.SquareFrameLayout;
 
 public class BditMediaGrid extends SquareFrameLayout implements View.OnClickListener {
 
@@ -52,7 +53,7 @@ public class BditMediaGrid extends SquareFrameLayout implements View.OnClickList
     }
 
     private void init(Context context) {
-        LayoutInflater.from(context).inflate(R.layout.bdit_media_grid_content, this, true);
+        LayoutInflater.from(context).inflate(R.layout.view_bdit_media_grid_content, this, true);
 
         mThumbnail = (ImageView) findViewById(R.id.media_thumbnail);
         mCheckView = (BditCheckView) findViewById(R.id.check_view);

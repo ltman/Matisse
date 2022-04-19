@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.zhihu.matisse.ui;
+package com.zhihu.matisseBlockdit.ui;
 
 import static com.zhihu.matisse.ui.MatisseActivity.EXTRA_RESULT_ORIGINAL_ENABLE;
 import static com.zhihu.matisse.ui.MatisseActivity.EXTRA_RESULT_SELECTION;
@@ -54,9 +54,9 @@ import com.zhihu.matisse.internal.model.AlbumCollection;
 import com.zhihu.matisse.internal.model.SelectedItemCollection;
 import com.zhihu.matisse.internal.ui.AlbumPreviewActivity;
 import com.zhihu.matisse.internal.ui.BasePreviewActivity;
-import com.zhihu.matisse.internal.ui.BditMediaSelectionFragment;
+import com.zhihu.matisseBlockdit.internal.ui.BditMediaSelectionFragment;
 import com.zhihu.matisse.internal.ui.adapter.AlbumsAdapter;
-import com.zhihu.matisse.internal.ui.adapter.BditAlbumMediaAdapter;
+import com.zhihu.matisseBlockdit.internal.ui.adapter.BditAlbumMediaAdapter;
 import com.zhihu.matisse.internal.ui.widget.AlbumsSpinner;
 import com.zhihu.matisse.internal.utils.MediaStoreCompat;
 import com.zhihu.matisse.internal.utils.PathUtils;
@@ -122,7 +122,7 @@ public class BditMatisseActivity extends AppCompatActivity
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeAsUpIndicator(ContextCompat.getDrawable(this, R.drawable.ic_cancel_nav));
+        actionBar.setHomeAsUpIndicator(ContextCompat.getDrawable(this, R.drawable.ic_bdit_cancel_nav));
         Drawable navigationIcon = toolbar.getNavigationIcon();
         TypedArray ta = getTheme().obtainStyledAttributes(new int[]{R.attr.album_element_color});
         int color = ta.getColor(0, 0);

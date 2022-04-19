@@ -36,7 +36,7 @@
             android:drawableEnd="@drawable/ic_arrow_drop_down_white_24dp"
             android:drawableRight="@drawable/ic_arrow_drop_down_white_24dp"
             android:gravity="center"
-            android:textAppearance="@style/text_appearance_text4s"
+            android:textAppearance="@style/text_appearance_selected_album"
             android:textColor="@color/colorText" />
 
     </androidx.appcompat.widget.Toolbar>
@@ -64,7 +64,7 @@
             android:drawablePadding="8dp"
             android:gravity="center"
             android:text="@string/empty_text"
-            android:textAppearance="@style/text_appearance_text5s"
+            android:textAppearance="@style/text_appearance_empty_view_content"
             android:textColor="?attr/album.emptyView.textColor" />
 
     </FrameLayout>

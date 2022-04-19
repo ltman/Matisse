@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.zhihu.matisse.internal.ui.adapter;
+package com.zhihu.matisseBlockdit.internal.ui.adapter;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -34,8 +34,9 @@ import com.zhihu.matisse.internal.entity.IncapableCause;
 import com.zhihu.matisse.internal.entity.Item;
 import com.zhihu.matisse.internal.entity.SelectionSpec;
 import com.zhihu.matisse.internal.model.SelectedItemCollection;
-import com.zhihu.matisse.internal.ui.widget.BditCheckView;
-import com.zhihu.matisse.internal.ui.widget.BditMediaGrid;
+import com.zhihu.matisse.internal.ui.adapter.RecyclerViewCursorAdapter;
+import com.zhihu.matisseBlockdit.internal.ui.widget.BditCheckView;
+import com.zhihu.matisseBlockdit.internal.ui.widget.BditMediaGrid;
 import com.zhihu.matisse.internal.ui.widget.CheckView;
 
 public class BditAlbumMediaAdapter extends
@@ -67,7 +68,7 @@ public class BditAlbumMediaAdapter extends
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == VIEW_TYPE_CAPTURE) {
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.bdit_photo_capture_item, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_bdit_photo_capture_item, parent, false);
             CaptureViewHolder holder = new CaptureViewHolder(v);
             holder.itemView.setOnClickListener(v1 -> {
                 if (v1.getContext() instanceof OnPhotoCapture) {
@@ -76,7 +77,7 @@ public class BditAlbumMediaAdapter extends
             });
             return holder;
         } else if (viewType == VIEW_TYPE_MEDIA) {
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.bdit_media_grid_item, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_bdit_media_grid_item, parent, false);
             return new MediaViewHolder(v);
         }
         return null;
@@ -231,7 +232,7 @@ public class BditAlbumMediaAdapter extends
             int spanCount = ((GridLayoutManager) lm).getSpanCount();
             int screenWidth = context.getResources().getDisplayMetrics().widthPixels;
             int availableWidth = screenWidth - context.getResources().getDimensionPixelSize(
-                    R.dimen.bdit_media_grid_spacing) * (spanCount - 1);
+                    R.dimen.ltman_media_grid_spacing) * (spanCount - 1);
             mImageResize = availableWidth / spanCount;
             mImageResize = (int) (mImageResize * mSelectionSpec.thumbnailScale);
         }

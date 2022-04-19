@@ -94,7 +94,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                 Matisse.from(SampleActivity.this)
                         .choose(MimeType.of(MimeType.JPEG, MimeType.PNG))
                         .countable(true)
-                        .theme(R.style.Matisse_Ltman)
+                        .theme(R.style.Matisse_Blockdit)
                         .capture(true)
                         .captureStrategy(
                                 new CaptureStrategy(true, "com.zhihu.matisse.sample.fileprovider", "test"))

@@ -13,7 +13,7 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<com.zhihu.matisse.internal.ui.widget.BditRoundedCornerView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhihu.matisseBlockdit.internal.ui.widget.BditRoundedCornerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -36,4 +36,4 @@
 
     </com.zhihu.matisse.internal.ui.widget.SquareFrameLayout>
 
-</com.zhihu.matisse.internal.ui.widget.BditRoundedCornerView>
+</com.zhihu.matisseBlockdit.internal.ui.widget.BditRoundedCornerView>
