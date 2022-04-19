@@ -27,7 +27,7 @@ android {
         targetSdkVersion 29
 
         versionCode 19
-        versionName "0.5.3-beta308"
+        versionName "0.5.3-beta309"
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
