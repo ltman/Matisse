@@ -15,6 +15,7 @@
  */
 package com.zhihu.matisseBlockdit.ui;
 
+import static com.zhihu.matisse.ui.MatisseActivity.EXTRA_RESULT_IS_CAPTURE;
 import static com.zhihu.matisse.ui.MatisseActivity.EXTRA_RESULT_ORIGINAL_ENABLE;
 import static com.zhihu.matisse.ui.MatisseActivity.EXTRA_RESULT_SELECTION;
 import static com.zhihu.matisse.ui.MatisseActivity.EXTRA_RESULT_SELECTION_PATH;
@@ -216,6 +217,7 @@ public class BditMatisseActivity extends AppCompatActivity
                 }
                 result.putParcelableArrayListExtra(EXTRA_RESULT_SELECTION, selectedUris);
                 result.putStringArrayListExtra(EXTRA_RESULT_SELECTION_PATH, selectedPaths);
+                result.putExtra(EXTRA_RESULT_IS_CAPTURE, false);
                 result.putExtra(EXTRA_RESULT_ORIGINAL_ENABLE, mOriginalEnable);
                 setResult(RESULT_OK, result);
                 finish();
@@ -238,6 +240,7 @@ public class BditMatisseActivity extends AppCompatActivity
             Intent result = new Intent();
             result.putParcelableArrayListExtra(EXTRA_RESULT_SELECTION, selected);
             result.putStringArrayListExtra(EXTRA_RESULT_SELECTION_PATH, selectedPath);
+            result.putExtra(EXTRA_RESULT_IS_CAPTURE, true);
             setResult(RESULT_OK, result);
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
                 BditMatisseActivity.this.revokeUriPermission(contentUri,
