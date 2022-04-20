@@ -26,8 +26,8 @@ android {
         minSdkVersion 16
         targetSdkVersion 29
 
-        versionCode 20
-        versionName "0.5.3-beta309"
+        versionCode 21
+        versionName "0.5.3-beta310"
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
